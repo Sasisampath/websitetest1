@@ -1,0 +1,546 @@
+
+ @import url('https://fonts.cdnfonts.com/css/made-canvas');
+                
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
+.hero-section-banner {
+    position: relative;  /* ✅ makes it the anchor for absolute children */
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-section-banner img:first-child {
+    display: block;
+    width: 100%;
+    height: 660px;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;  /* ✅ overlays text ON the image */
+    top: 40px;
+    left: 40px;
+    color: #1a0a0a;
+}
+
+.hero-text h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1a0a0a;
+    max-width: 280px;
+    margin-bottom: 16px;
+}
+
+.hero-text a {
+    background-color: #6a0610;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* dreama logo - bottom left */
+.hero-section-banner .dreama-logo {
+    position: absolute;  /* ✅ overlays logo ON the image */
+    bottom: 0;
+    left: 0;
+}
+
+.offerbanner {
+    background-color: #311d1f;
+    color: #FFFAED;
+    text-align: center;
+    padding:14px;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: medium;
+    text-transform: uppercase;
+    font-family: 'MADE Canvas', sans-serif;                                         
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #6a0610;
+    font-size: 16px;
+    font-weight: regular;
+    font-family: 'MADE Canvas', sans-serif; 
+}
+.nav-log in a {
+    text-decoration: none;
+    color: #6a0610;
+    font-size: 16px;
+    font-weight: regular;
+    font-family: 'MADE Canvas', sans-serif; 
+}       
+
+.nav-cart {
+    position: relative;
+}
+.nav-cart img {
+    width: 24px;
+    height: 24px;
+}
+.nav-cart .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #6a0610;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'MADE Canvas', sans-serif; 
+} 
+
+/* ── Section Wrapper ── */
+.popular-products {
+    display: flex;
+    gap: 32px;
+    padding: 40px;
+    background-color: #fff;
+    align-items: flex-start;
+}
+
+/* ── Left Hero Card ── */
+.hero-product-card {
+    position: relative;
+    width: 420px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hero-product-card > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.hero-product-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 12px 20px;
+    border-radius: 10px;
+}
+
+.hero-product-info h3 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a0a0a;
+}
+
+.hero-product-info p {
+    margin: 0;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/* ── Right Product Group ── */
+.product-group {
+    flex: 1;
+}
+
+.product-group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.solar-title {
+    color: #6a0610;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.shop-all-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #6a0610;
+    border-radius: 6px;
+    padding: 8px 14px;
+}
+
+.shop-all-btn a {
+    color: #1a0a0a;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.shop-all-btn img {
+    height: 14px;
+    width: 14px;
+}
+
+/* ── Product Grid (2x2) ── */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* ✅ 2 columns */
+    gap: 24px;
+}
+
+/* ── Individual Product Card ── */
+.product-card {
+    background-color: #f5f3ee;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.product-img-wrap {
+    position: relative;
+}
+
+.product-img-wrap img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── + Button on image ── */
+.add-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* ── Product Info Below Image ── */
+.product-card h3 {
+    margin: 12px 14px 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a0a0a;
+}
+
+.product-card p {
+    margin: 0 14px 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.sale-price {
+    color: #6a0610;
+    font-weight: 600;
+}
+
+/* ── Variant Buttons ── */
+.variant-btns {
+    display: flex;
+    gap: 8px;
+    padding: 0 14px 16px;
+}
+
+.variant-btns button {
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.variant-btns button:hover {
+    border-color: #6a0610;
+    color: #6a0610;
+}
+
+.testimonials {
+    background-color: #fff2c9;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.quote-text {
+    font-size: clamp(3rem, 10vw, 9rem); /* ✅ huge responsive text */
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0 0 30px;
+
+    /* ✅ outline effect — transparent fill, colored stroke */
+    color: transparent;
+    -webkit-text-stroke: 2px #6a0610;
+}
+
+.quote-author {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #6a0610;
+    margin: 0;
+}
+
+/* skin-care-category */
+
+.skin-care-category {
+    padding: 40px;        /* ✅ adds padding around the whole section */
+}
+
+.skin-care-category h2 {
+    color: #6a0610;       /* ✅ red heading like the reference */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.category {
+    display: flex;
+    gap: 24px;            /* ✅ gap between cards instead of space-around */
+    padding: 20px 0;
+}
+
+.category-card {
+    background-color: #fff;
+    width: 300px;
+    text-align: left;     /* ✅ left-aligned, not center */
+}
+
+.category-card img {
+    width: 100%;          /* ✅ image fills card width */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.category-card h3 {
+    color: #6a0610;       /* ✅ red heading */
+    font-weight: 700;
+    margin: 12px 0 4px;
+}
+
+.category-card p {
+    color: #333;
+    margin: 0 0 12px;
+}
+/* skin-care-category */
+.our-story {
+    position: relative;   /* ✅ anchor for absolute children */
+    width: 100%;
+    overflow: hidden;
+}
+.category-card .shop-btn img {
+    width: 16px;      /* ✅ constrain the arrow size */
+    height: 16px;
+}
+.our-story img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Top Left text */
+.story-title {
+    position: absolute;   /* ✅ overlaid on image */
+    top: 40px;
+    left: 40px;
+}
+
+.story-title h2 {
+    color: #6a0610;
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+}
+
+/* Top Right text */
+.story-desc {
+    position: absolute;   /* ✅ overlaid on image */
+    top: 40px;
+    right: 40px;
+    text-align: left;
+}
+
+.story-desc p {
+    color: #6a0610;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 16px;
+}
+
+.story-desc a {
+    border: 1px solid #6a0610;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #6a0610;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.gallery {
+    padding: 40px;
+}
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between;  /* ✅ title left, button right */
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.gallery-header p {
+    color: #6a0610;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.join-btn a {
+    border: 1px solid #6a0610;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #6a0610;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.gallery-images {
+    display: flex;         /* ✅ images side by side */
+    gap: 16px;
+}
+
+.gallery-images img {
+    flex: 1;               /* ✅ equal width for all images */
+    height: 350px;
+    object-fit: cover;     /* ✅ fills without stretching */
+    border-radius: 10px;
+    width: 0;              /* ✅ needed with flex:1 to be truly equal */
+}
+.newsletter {
+    background-color: #f5c6cb;       /* ✅ pink background */
+    display: flex;
+    justify-content: space-between;  /* ✅ left and right layout */
+    align-items: center;
+    padding: 60px 80px;
+}
+
+.newsletter-left {
+    max-width: 380px;
+}
+
+.newsletter-left h2 {
+    color: #6a0610;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+.newsletter-left p {
+    color: #6a0610;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.newsletter-right {
+    display: flex;
+    flex-direction: column;   /* ✅ stacks label, input, checkbox, button */
+    gap: 14px;
+    min-width: 400px;
+}
+
+.newsletter-right label {
+    color: #6a0610;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: -8px;
+}
+
+.newsletter-right input[type="email"] {
+    padding: 14px 16px;
+    border: 1.5px solid #6a0610;   /* ✅ red border */
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-row input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #6a0610;     /* ✅ red checkbox */
+    cursor: pointer;
+}
+
+.checkbox-row label {
+    color: #6a0610;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+button[type="submit"] {
+    background-color: #6a0610;  /* ✅ dark red button */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+}
+
+button[type="submit"]:hover {
+    background-color: #8b0a1a;
+}
+
+.free-shipping {
+    background-color: #FFF2C9;
+    color: #FFFAED;
+    text-align: center;
+    width: 100%;
+    padding: 114px;
+    font-size: 14px;
+    font-weight: medium;
+    text-transform: uppercase;
+    font-family: 'MADE Canvas', sans-serif;                                         
+}
+
+.footer {
+    background-color: #311D1F;
+    color: #FFFAED;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    font-weight: medium;
+    font-family: 'MADE Canvas', sans-serif;                                         
+}
