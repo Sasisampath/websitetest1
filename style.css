@@ -302,45 +302,87 @@ nav {
 }
 
 /* skin-care-category */
-
+/* ── Skin Care Category Section ── */
 .skin-care-category {
-    padding: 40px;        /* ✅ adds padding around the whole section */
+    padding: 40px;
 }
 
 .skin-care-category h2 {
-    color: #6a0610;       /* ✅ red heading like the reference */
+    color: #6a0610;
     font-size: 1.8rem;
+    font-weight: 800;
     margin-bottom: 20px;
 }
 
+/* ── Cards Row ── */
 .category {
     display: flex;
-    gap: 24px;            /* ✅ gap between cards instead of space-around */
+    gap: 24px;
     padding: 20px 0;
 }
 
+/* ── Individual Card ── */
 .category-card {
-    background-color: #fff;
-    width: 300px;
-    text-align: left;     /* ✅ left-aligned, not center */
+    flex: 1;              /* ✅ fills width equally — no empty space */
+    text-align: left;
 }
 
-.category-card img {
-    width: 100%;          /* ✅ image fills card width */
+/* ── Card Image ── */
+.category-card > img {   /* ✅ > targets ONLY the main image, not arrow */
+    width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
+    display: block;
 }
 
+/* ── Card Title ── */
 .category-card h3 {
-    color: #6a0610;       /* ✅ red heading */
+    color: #6a0610;
     font-weight: 700;
+    font-size: 1.1rem;
     margin: 12px 0 4px;
 }
 
+/* ── Card Description ── */
 .category-card p {
     color: #333;
+    font-size: 0.95rem;
     margin: 0 0 12px;
+}
+
+/* ── Shop All Button ── */
+.shop-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #6a0610;   /* ✅ red border */
+    border-radius: 6px;
+    padding: 8px 12px;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.shop-btn a {
+    color: #1a0a0a;              /* ✅ dark text, not blue */
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.shop-btn:hover {
+    background-color: #6a0610;
+}
+
+.shop-btn:hover a {
+    color: #fff;                 /* ✅ white text on hover */
+}
+
+/* ── Arrow Icon inside button ── */
+.shop-btn img {
+    width: 16px;                 /* ✅ locks arrow size */
+    height: 16px;
+    object-fit: unset;           /* ✅ overrides card img rule */
+    border-radius: 0;            /* ✅ overrides card img border-radius */
 }
 /* skin-care-category */
 .our-story {
