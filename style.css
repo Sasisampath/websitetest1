@@ -330,7 +330,7 @@ nav {
 /* ── Card Image ── */
 .category-card > img {   /* ✅ > targets ONLY the main image, not arrow */
     width: 100%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     border-radius: 10px;
     display: block;
@@ -385,6 +385,7 @@ nav {
     border-radius: 0;            /* ✅ overrides card img border-radius */
 }
 /* skin-care-category */
+
 .our-story {
     position: relative;   /* ✅ anchor for absolute children */
     width: 100%;
@@ -394,6 +395,7 @@ nav {
     width: 16px;      /* ✅ constrain the arrow size */
     height: 16px;
 }
+
 .our-story img {
     width: 100%;
     height: 700px;
@@ -579,10 +581,75 @@ button[type="submit"]:hover {
 
 .footer {
     background-color: #311D1F;
-    color: #FFFAED;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
-    font-weight: medium;
-    font-family: 'MADE Canvas', sans-serif;                                         
+    color: #fff;
+    padding: 60px 40px 0;
+    font-family: 'MADE Canvas', sans-serif;
+}
+/* ── Footer ── */
+/* ── Top Two Columns ── */
+.footer-top {
+    display: flex;
+    gap: 120px;
+    margin-bottom: 80px;
+}
+
+/* ── Left Nav Column ── */
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* ── Social Icons ── */
+.footer-social {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.footer-social img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1); /* ✅ makes SVGs white */
+}
+
+/* ── Right Policy Column ── */
+.footer-policy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-policy a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+/* ── Big dreama Logo ── */
+.footer-logo img {
+    width: 100%;
+    display: block;
+}
+
+/* ── Copyright ── */
+.footer-copy {
+    text-align: right;
+    padding: 16px 0 24px;
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.footer-copy a {
+    color: #ccc;
 }
