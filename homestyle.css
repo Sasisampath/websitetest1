@@ -1,14 +1,137 @@
 
- @import url('https://fonts.cdnfonts.com/css/made-canvas');
                 
+@import url('https://fonts.cdnfonts.com/css/made-canvas');
+                
+/* ── Layout Resets ── */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }   
 
+body {
+    font-family: 'MADE Canvas', sans-serif;
+    color: #1a0a0a;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Fixed Announcement Header ── */
+.announcement-bar {
+    background-color: #311D1F;
+    color: #fff;
+    text-align: center;
+    padding: 11px 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/* ── Exact Clone Header Container ── */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 50px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    width: 100%;
+}
+
+.header-logo a {
+    display: inline-block;
+}
+
+.header-logo img {
+    display: block;
+    width: 112px; 
+    height: auto;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px; 
+}
+
+.header-menu a {
+    color: #6a0610;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-transform: none; 
+    transition: color 0.2s ease;
+}
+
+.header-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Right-Hand Utilities Framework */
+.header-utilities {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.account-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #6a0610;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.account-link:hover {
+    opacity: 0.8;
+}
+
+.profile-icon {
+    display: block;
+}
+
+.cart-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cart-icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+.cart-count-badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: #6a0610;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Old Outdated Classes Fallback Protection ── */
+.offerbanner {
+    display: none;
+}
+
+/* ── Hero Section Layout ── */
 .hero-section-banner {
-    position: relative;  /* ✅ makes it the anchor for absolute children */
+    position: relative;  
     width: 100%;
     overflow: hidden;
 }
@@ -21,10 +144,11 @@
 }
 
 .hero-text {
-    position: absolute;  /* ✅ overlays text ON the image */
+    position: absolute;  
     top: 40px;
     left: 40px;
     color: #1a0a0a;
+    z-index: 2;
 }
 
 .hero-text h2 {
@@ -36,6 +160,7 @@
 }
 
 .hero-text a {
+    display: inline-block;
     background-color: #6a0610;
     color: #fff;
     padding: 12px 20px;
@@ -44,69 +169,14 @@
     font-weight: 500;
 }
 
-/* dreama logo - bottom left */
 .hero-section-banner .dreama-logo {
-    position: absolute;  /* ✅ overlays logo ON the image */
+    position: absolute;  
     bottom: 0;
     left: 0;
+    z-index: 2;
 }
 
-.offerbanner {
-    background-color: #311d1f;
-    color: #FFFAED;
-    text-align: center;
-    padding:14px;
-    margin: 10px 0;
-    font-size: 14px;
-    font-weight: medium;
-    text-transform: uppercase;
-    font-family: 'MADE Canvas', sans-serif;                                         
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-}
-
-.nav-links a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #6a0610;
-    font-size: 16px;
-    font-weight: regular;
-    font-family: 'MADE Canvas', sans-serif; 
-}
-.nav-log in a {
-    text-decoration: none;
-    color: #6a0610;
-    font-size: 16px;
-    font-weight: regular;
-    font-family: 'MADE Canvas', sans-serif; 
-}       
-
-.nav-cart {
-    position: relative;
-}
-.nav-cart img {
-    width: 24px;
-    height: 24px;
-}
-.nav-cart .cart-count {
-    position: absolute;
-    top: -5px;
-    right: -10px;
-    background-color: #6a0610;
-    color: #fff;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    font-weight: bold;
-    font-family: 'MADE Canvas', sans-serif; 
-} 
-
-/* ── Section Wrapper ── */
+/* ── Popular Products Grid Layout ── */
 .popular-products {
     display: flex;
     gap: 32px;
@@ -115,13 +185,15 @@ nav {
     align-items: flex-start;
 }
 
-/* ── Left Hero Card ── */
 .hero-product-card {
     position: relative;
     width: 420px;
+    height: 600px;
     flex-shrink: 0;
     border-radius: 12px;
     overflow: hidden;
+    display: block;
+    text-decoration: none;
 }
 
 .hero-product-card > img {
@@ -129,7 +201,6 @@ nav {
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 12px;
 }
 
 .hero-product-info {
@@ -154,7 +225,6 @@ nav {
     font-size: 0.9rem;
 }
 
-/* ── Right Product Group ── */
 .product-group {
     flex: 1;
 }
@@ -193,14 +263,12 @@ nav {
     width: 14px;
 }
 
-/* ── Product Grid (2x2) ── */
 .product-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;  /* ✅ 2 columns */
+    grid-template-columns: 1fr 1fr;  
     gap: 24px;
 }
 
-/* ── Individual Product Card ── */
 .product-card {
     background-color: #f5f3ee;
     border-radius: 12px;
@@ -211,6 +279,10 @@ nav {
     position: relative;
 }
 
+.product-img-wrap a {
+    display: block;
+}
+
 .product-img-wrap img {
     width: 100%;
     height: 280px;
@@ -218,7 +290,15 @@ nav {
     display: block;
 }
 
-/* ── + Button on image ── */
+.product-card h3 a {
+    text-decoration: none;
+    color: #1a0a0a;
+}
+
+.product-card h3 a:hover {
+    color: #6a0610;
+}
+
 .add-btn {
     position: absolute;
     bottom: 12px;
@@ -236,12 +316,10 @@ nav {
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-/* ── Product Info Below Image ── */
 .product-card h3 {
     margin: 12px 14px 4px;
     font-size: 1rem;
     font-weight: 700;
-    color: #1a0a0a;
 }
 
 .product-card p {
@@ -255,7 +333,6 @@ nav {
     font-weight: 600;
 }
 
-/* ── Variant Buttons ── */
 .variant-btns {
     display: flex;
     gap: 8px;
@@ -270,6 +347,7 @@ nav {
     font-size: 0.8rem;
     cursor: pointer;
     color: #333;
+    font-family: inherit;
 }
 
 .variant-btns button:hover {
@@ -277,6 +355,7 @@ nav {
     color: #6a0610;
 }
 
+/* ── Typography Testimonials ── */
 .testimonials {
     background-color: #fff2c9;
     padding: 60px 40px;
@@ -284,12 +363,10 @@ nav {
 }
 
 .quote-text {
-    font-size: clamp(3rem, 10vw, 9rem); /* ✅ huge responsive text */
+    font-size: clamp(3rem, 10vw, 7rem); 
     font-weight: 900;
     line-height: 1.1;
     margin: 0 0 30px;
-
-    /* ✅ outline effect — transparent fill, colored stroke */
     color: transparent;
     -webkit-text-stroke: 2px #6a0610;
 }
@@ -301,8 +378,7 @@ nav {
     margin: 0;
 }
 
-/* skin-care-category */
-/* ── Skin Care Category Section ── */
+/* ── Care Categories Section ── */
 .skin-care-category {
     padding: 40px;
 }
@@ -314,21 +390,18 @@ nav {
     margin-bottom: 20px;
 }
 
-/* ── Cards Row ── */
 .category {
     display: flex;
     gap: 24px;
     padding: 20px 0;
 }
 
-/* ── Individual Card ── */
 .category-card {
-    flex: 1;              /* ✅ fills width equally — no empty space */
+    flex: 1;              
     text-align: left;
 }
 
-/* ── Card Image ── */
-.category-card > img {   /* ✅ > targets ONLY the main image, not arrow */
+.category-card > img {   
     width: 100%;
     height: 400px;
     object-fit: cover;
@@ -336,7 +409,6 @@ nav {
     display: block;
 }
 
-/* ── Card Title ── */
 .category-card h3 {
     color: #6a0610;
     font-weight: 700;
@@ -344,27 +416,26 @@ nav {
     margin: 12px 0 4px;
 }
 
-/* ── Card Description ── */
 .category-card p {
     color: #333;
     font-size: 0.95rem;
     margin: 0 0 12px;
 }
 
-/* ── Shop All Button ── */
 .shop-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    border: 1px solid #6a0610;   /* ✅ red border */
+    border: 1px solid #6a0610;   
     border-radius: 6px;
     padding: 8px 12px;
     text-decoration: none;
     width: fit-content;
+    cursor: pointer;
 }
 
 .shop-btn a {
-    color: #1a0a0a;              /* ✅ dark text, not blue */
+    color: #1a0a0a;              
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -374,26 +445,19 @@ nav {
 }
 
 .shop-btn:hover a {
-    color: #fff;                 /* ✅ white text on hover */
+    color: #fff;                 
 }
 
-/* ── Arrow Icon inside button ── */
 .shop-btn img {
-    width: 16px;                 /* ✅ locks arrow size */
+    width: 16px;                 
     height: 16px;
-    object-fit: unset;           /* ✅ overrides card img rule */
-    border-radius: 0;            /* ✅ overrides card img border-radius */
 }
-/* skin-care-category */
 
+/* ── Our Story Mid Banner Section ── */
 .our-story {
-    position: relative;   /* ✅ anchor for absolute children */
+    position: relative;   
     width: 100%;
     overflow: hidden;
-}
-.category-card .shop-btn img {
-    width: 16px;      /* ✅ constrain the arrow size */
-    height: 16px;
 }
 
 .our-story img {
@@ -403,9 +467,8 @@ nav {
     display: block;
 }
 
-/* Top Left text */
 .story-title {
-    position: absolute;   /* ✅ overlaid on image */
+    position: absolute;   
     top: 40px;
     left: 40px;
 }
@@ -418,9 +481,8 @@ nav {
     margin: 0;
 }
 
-/* Top Right text */
 .story-desc {
-    position: absolute;   /* ✅ overlaid on image */
+    position: absolute;   
     top: 40px;
     right: 40px;
     text-align: left;
@@ -435,6 +497,7 @@ nav {
 }
 
 .story-desc a {
+    display: inline-block;
     border: 1px solid #6a0610;
     border-radius: 20px;
     padding: 10px 20px;
@@ -443,13 +506,48 @@ nav {
     font-size: 0.95rem;
 }
 
+/* ── Free Shipping Grid Block ── */
+.free-shipping {
+    background-color: #FFF2C9;
+    width: 100%;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.shipping-title {
+    color: #6a0610;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.shipping-body p {
+    color: #6a0610;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.shipping-body a {
+    display: inline-block;
+    background-color: #6a0610;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ── Gallery Layout ── */
 .gallery {
     padding: 40px;
 }
 
 .gallery-header {
     display: flex;
-    justify-content: space-between;  /* ✅ title left, button right */
+    justify-content: space-between;  
     align-items: center;
     margin-bottom: 24px;
 }
@@ -471,21 +569,23 @@ nav {
 }
 
 .gallery-images {
-    display: flex;         /* ✅ images side by side */
+    display: flex;         
     gap: 16px;
 }
 
 .gallery-images img {
-    flex: 1;               /* ✅ equal width for all images */
+    flex: 1;               
     height: 350px;
-    object-fit: cover;     /* ✅ fills without stretching */
+    object-fit: cover;     
     border-radius: 10px;
-    width: 0;              /* ✅ needed with flex:1 to be truly equal */
+    width: 0;              
 }
+
+/* ── Newsletter Styling ── */
 .newsletter {
-    background-color: #f5c6cb;       /* ✅ pink background */
+    background-color: #f5c6cb;       
     display: flex;
-    justify-content: space-between;  /* ✅ left and right layout */
+    justify-content: space-between;  
     align-items: center;
     padding: 60px 80px;
 }
@@ -509,7 +609,7 @@ nav {
 
 .newsletter-right {
     display: flex;
-    flex-direction: column;   /* ✅ stacks label, input, checkbox, button */
+    flex-direction: column;   
     gap: 14px;
     min-width: 400px;
 }
@@ -523,7 +623,7 @@ nav {
 
 .newsletter-right input[type="email"] {
     padding: 14px 16px;
-    border: 1.5px solid #6a0610;   /* ✅ red border */
+    border: 1.5px solid #6a0610;   
     border-radius: 8px;
     font-size: 1rem;
     background: #fff;
@@ -541,7 +641,7 @@ nav {
 .checkbox-row input[type="checkbox"] {
     width: 18px;
     height: 18px;
-    accent-color: #6a0610;     /* ✅ red checkbox */
+    accent-color: #6a0610;     
     cursor: pointer;
 }
 
@@ -552,7 +652,7 @@ nav {
 }
 
 button[type="submit"] {
-    background-color: #6a0610;  /* ✅ dark red button */
+    background-color: #6a0610;  
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -561,39 +661,26 @@ button[type="submit"] {
     font-weight: 600;
     cursor: pointer;
     width: fit-content;
+    font-family: inherit;
 }
 
 button[type="submit"]:hover {
     background-color: #8b0a1a;
 }
 
-.free-shipping {
-    background-color: #FFF2C9;
-    color: #FFFAED;
-    text-align: center;
-    width: 100%;
-    padding: 114px;
-    font-size: 14px;
-    font-weight: medium;
-    text-transform: uppercase;
-    font-family: 'MADE Canvas', sans-serif;                                         
-}
-
+/* ── Global Footer Components ── */
 .footer {
     background-color: #311D1F;
     color: #fff;
     padding: 60px 40px 0;
-    font-family: 'MADE Canvas', sans-serif;
 }
-/* ── Footer ── */
-/* ── Top Two Columns ── */
+
 .footer-top {
     display: flex;
     gap: 120px;
     margin-bottom: 80px;
 }
 
-/* ── Left Nav Column ── */
 .footer-nav {
     display: flex;
     flex-direction: column;
@@ -610,7 +697,6 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
-/* ── Social Icons ── */
 .footer-social {
     display: flex;
     gap: 16px;
@@ -620,10 +706,9 @@ button[type="submit"]:hover {
 .footer-social img {
     width: 28px;
     height: 28px;
-    filter: brightness(0) invert(1); /* ✅ makes SVGs white */
+    filter: brightness(0) invert(1); 
 }
 
-/* ── Right Policy Column ── */
 .footer-policy {
     display: flex;
     flex-direction: column;
@@ -636,20 +721,14 @@ button[type="submit"]:hover {
     font-size: 1rem;
 }
 
-/* ── Big dreama Logo ── */
 .footer-logo img {
     width: 100%;
     display: block;
 }
 
-/* ── Copyright ── */
 .footer-copy {
     text-align: right;
     padding: 16px 0 24px;
     font-size: 0.85rem;
-    color: #ccc;
-}
-
-.footer-copy a {
     color: #ccc;
 }

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Moisture Mask - Dreama</title>
+    <link rel="stylesheet" href="productdetailpage.css">
+    <link href="https://fonts.cdnfonts.com/css/made-canvas" rel="stylesheet">
+</head>
+<body>
+
+    <div class="announcement-bar">
+        OWN THE GLOW: FREE U.S. SHIPPING ON $60+
+    </div>
+
+    <nav class="site-header">
+        <div class="header-logo">
+            <a href="Home.html">
+                <img src="https://static.wixstatic.com/media/c837a6_85d29d7fc97641b38203a040f89e6c2a~mv2.png" alt="dreama.">
+            </a>
+        </div>
+        
+        <div class="header-menu">
+            <a href="all products.html">Shop All</a>
+            <a href="all products.html">Cleanse</a>
+            <a href="all products.html">Hydrate</a>
+            <a href="all products.html">Protect</a>
+            <a href="all products.html">New Arrivals</a>
+            <a href="Our story.html">Our Story</a>
+        </div>
+        
+        <div class="header-utilities">
+            <a href="#" class="account-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6a0610" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="profile-icon">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>Log In</span>
+            </a>
+            <div class="cart-container">
+                <img src="./Assets/shopping-bag.svg" alt="Cart Icon" class="cart-icon">
+                <span class="cart-count-badge">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="product-detail">
+
+        <div class="product-images">
+            <img src="https://static.wixstatic.com/media/c837a6_094a9024feec4b52bf06fe1b4fe92eef~mv2.png/v1/fill/w_1024,h_1024,al_c,q_90,enc_avif,quality_auto/c837a6_094a9024feec4b52bf06fe1b4fe92eef~mv2.png" alt="Midnight Moisture Mask">
+            <img src="https://static.wixstatic.com/media/c837a6_e9d5dcb131d04c8fa976367cc374074e~mv2.png/v1/fill/w_569,h_569,al_c,usm_0.66_1.00_0.01/c837a6_e9d5dcb131d04c8fa976367cc374074e~mv2.png" alt="Midnight Moisture Mask in use">
+            <img src="https://static.wixstatic.com/media/c837a6_c5798228f218448ab578b4d954b6eccf~mv2.png/v1/fill/w_1024,h_1024,al_c,q_90,enc_avif,quality_auto/c837a6_c5798228f218448ab578b4d954b6eccf~mv2.png" alt="Midnight Moisture Mask lifestyle">
+        </div>
+
+        <div class="product-info">
+
+            <h1 class="product-title">Midnight Moisture Mask</h1>
+            <p class="product-price">$60.00</p>
+
+            <div class="option-group">
+                <p class="option-label">Size *</p>
+                <div class="size-btns">
+                    <button class="size-btn active">200ml</button>
+                    <button class="size-btn">300ml</button>
+                </div>
+            </div>
+
+            <div class="option-group">
+                <p class="option-label">Quantity *</p>
+                <div class="quantity-control">
+                    <button class="qty-btn" onclick="changeQty(-1)">−</button>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <button class="qty-btn" onclick="changeQty(1)">+</button>
+                </div>
+            </div>
+
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="buy-now-btn">Buy Now</button>
+
+            <p class="product-hint">Wide-bodied jar, substantial frosted glass, wide opening, large domed lid.</p>
+
+            <div class="accordion">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>Shipping Info</span>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-body">
+                    <p>I'm a great place to add more information about your shipping methods, packaging, and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.</p>
+                </div>
+            </div>
+
+            <div class="accordion open">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>Return & Refund Policy</span>
+                    <span class="accordion-icon">−</span>
+                </div>
+                <div class="accordion-body" style="display:block;">
+                    <p>I'm a great place to let your customers know what to do in case they are dissatisfied with their purchase.</p>
+                    <ul>
+                        <li>Easy Returns & Exchanges</li>
+                        <li>Hassle-Free Process</li>
+                        <li>Builds Customer Confidence</li>
+                    </ul>
+                    <p>Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>Product Info</span>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-body">
+                    <p>I'm a great place to add more information about your product, such as sizing, material, care, and cleaning instructions. This is also a great space to highlight what makes this product special and how your customers can benefit from this item.</p>
+                </div>
+            </div>
+
+            <div class="share-icons">
+                <a href="#" title="Facebook">
+                    <svg width="20" height="20" fill="#6a0610" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" title="Pinterest">
+                    <svg width="20" height="20" fill="#6a0610" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.267.641 1.267 1.408 0 .858-.546 2.141-.828 3.329-.236.995.499 1.806 1.476 1.806 1.771 0 3.132-1.867 3.132-4.562 0-2.387-1.715-4.057-4.163-4.057-2.836 0-4.498 2.126-4.498 4.324 0 .856.33 1.773.741 2.274a.3.3 0 0 1 .069.286c-.076.309-.244.995-.277 1.134-.044.183-.146.222-.337.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                </a>
+                <a href="#" title="WhatsApp">
+                    <svg width="20" height="20" fill="#6a0610" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                </a>
+                <a href="#" title="Twitter/X">
+                    <svg width="20" height="20" fill="#6a0610" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-nav">
+                <a href="all products.html">Shop All</a>
+                <a href="all products.html">Cleanse</a>
+                <a href="all products.html">Hydrate</a>
+                <a href="all products.html">Protect</a>
+                <a href="all products.html">New Arrivals</a>
+                <a href="Our story.html">Our Story</a>
+                <div class="footer-social">
+                    <a href="#"><img src="./Assets/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="./Assets/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="./Assets/tiktok.svg" alt="TikTok"></a>
+                </div>
+            </div>
+            <div class="footer-policy">
+                <a href="#">Refund Policy</a>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Accessibility Statement</a>
+            </div>
+        </div>
+        <div class="footer-logo">
+            <img src="https://static.wixstatic.com/media/c837a6_779a4fe798cb45b2a131576156bd0118~mv2.png" alt="dreama">
+        </div>
+        <div class="footer-copy">
+            <p>© 2035 by dreama. Powered and secured by <a href="#">Wix</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function changeQty(change) {
+            const input = document.getElementById('quantity');
+            const newVal = Math.max(1, parseInt(input.value) + change);
+            input.value = newVal;
+        }
+
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        function toggleAccordion(header) {
+            const body = header.nextElementSibling;
+            const icon = header.querySelector('.accordion-icon');
+            const isOpen = body.style.display === 'block';
+            body.style.display = isOpen ? 'none' : 'block';
+            icon.textContent = isOpen ? '+' : '−';
+        }
+    </script>
+
+</body>
+</html>

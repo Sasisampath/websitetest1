@@ -3,32 +3,427 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>All Products - Dreama</title>
     <link rel="stylesheet" href="All Products.css">
     <link href="https://fonts.cdnfonts.com/css/made-canvas" rel="stylesheet">
 </head>
 <body>
-    <nav>
-    <div class="logo"><img src="https://static.wixstatic.com/media/c837a6_85d29d7fc97641b38203a040f89e6c2a~mv2.png" alt="" width="137px" height=""></div>
-           <!--website navbar logo-->
-        <div class="nav-links">
-            <a href="#">Shop all More</a>
-            <a href="#">Cleanse</a>
-            <a href="#">Hydrate</a>
-            <a href="#">Protect</a>
-            <a href="#">Tools</a>
-            <a href="#">New Arrivals</a>
-            <a href="#">Our Story</a>
+
+    <div class="announcement-bar">
+        OWN THE GLOW: FREE U.S. SHIPPING ON $60+
+    </div>
+
+    <nav class="site-header">
+        <div class="header-logo">
+            <a href="Home.html">
+                <img src="https://static.wixstatic.com/media/c837a6_85d29d7fc97641b38203a040f89e6c2a~mv2.png" alt="dreama.">
+            </a>
         </div>
-        <!--website navbar menu-->
-        <div class="nav-log in">
-            <a href="#">Log In</a>
+        
+        <div class="header-menu">
+            <a href="all products.html" class="active">Shop All</a>
+            <a href="all products.html">Cleanse</a>
+            <a href="all products.html">Hydrate</a>
+            <a href="all products.html">Protect</a>
+            <a href="all products.html">New Arrivals</a>
+            <a href="Our story.html">Our Story</a>
         </div>
-        <!--website navbar login-->
-        <div class="nav-cart">
-            <img src="./Assets/shopping-bag.svg" alt="">
+        
+        <div class="header-utilities">
+            <a href="#" class="account-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6a0610" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="profile-icon">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>Log In</span>
+            </a>
+            <div class="cart-container">
+                <img src="./Assets/shopping-bag.svg" alt="Cart Icon" class="cart-icon">
+                <span class="cart-count-badge">0</span>
+            </div>
         </div>
-        <!--website navbar cart-->
     </nav>
+
+    <div class="AllProducts-header">
+        <div class="AllProducts-breadcrumb">
+            <a href="Home.html">Home</a>
+            <img src="./Assets/chevron-right.svg" alt=">" width="14" height="14">
+            <p>All Products</p>
+        </div>
+        <h1 class="AllProducts-title">All Products</h1>
+    </div>
+
+    <div class="AllProducts-banner">
+        <img src="https://static.wixstatic.com/media/c837a6_4ddaa47cfda847a1a91bdde04ff5441e~mv2.png/v1/fill/w_2752,h_545,al_c,q_90,enc_avif,quality_auto/c837a6_4ddaa47cfda847a1a91bdde04ff5441e~mv2.png" alt="All Products Banner">
+    </div>
+
+    <div class="main-content">
+
+        <aside class="sidebar">
+            <h3>Browse by</h3>
+            <hr>
+            <a href="all products.html">All Products</a>
+            <a href="all products.html">Cleanse</a>
+            <a href="all products.html">Hydrate</a>
+            <a href="all products.html">Protect</a>
+
+            <h3>Filter by</h3>
+            <hr>
+
+            <div class="filter-group">
+                <div class="filter-label">Price <span>—</span></div>
+                <input type="range" min="15" max="60" value="60" class="price-range">
+                <div class="price-values"><span>$15</span><span>$60</span></div>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-label">Flavor <span>+</span></div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-label">Formula <span>+</span></div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-label">SPF Level <span>+</span></div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-label">Scent <span>+</span></div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-label">Size <span>+</span></div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-label">Skin Type <span>+</span></div>
+            </div>
+        </aside>
+
+        <div class="products-section">
+
+            <div class="search-results-bar">
+                <p class="search-results-count">18 products</p>
+                <div class="sort-by">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort" name="sort">
+                        <option value="recommended">Recommended ∨</option>
+                        <option value="newest">Newest</option>
+                        <option value="price-low">Price (Low to High)</option>
+                        <option value="price-high">Price (High to Low)</option>
+                        <option value="name-az">Name A-Z</option>
+                        <option value="name-za">Name Z-A</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_e9d5dcb131d04c8fa976367cc374074e~mv2.png/v1/fill/w_1552,h_1552,al_c,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_e9d5dcb131d04c8fa976367cc374074e~mv2.png" alt="Midnight Moisture Mask">
+                        </a>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Midnight Moisture Mask</a></p>
+                    <p class="product-price">$60.00</p>
+                    <div class="variant-btns">
+                        <button>200ml</button>
+                        <button>300ml</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_4f26b509fe90484d9480f55ce166daa9~mv2.png/v1/fill/w_1024,h_1024,al_c,q_90,enc_avif,quality_auto/c837a6_4f26b509fe90484d9480f55ce166daa9~mv2.png" alt="Awake Eye Balm">
+                        </a>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Awake Eye Balm</a></p>
+                    <p class="product-price">$42.00</p>
+                    <div class="variant-btns">
+                        <button>150ml</button>
+                        <button>200ml</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_7f89ffb7da77480b8a52436a6b388d2a~mv2.png/v1/fill/w_1552,h_1552,al_c,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_7f89ffb7da77480b8a52436a6b388d2a~mv2.png" alt="Silk Wash Cleanser">
+                        </a>
+                        <span class="badge bestseller">Bestseller</span>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Silk Wash Cleanser</a></p>
+                    <p class="product-price">$35.00</p>
+                    <div class="variant-btns">
+                        <button>150ml</button>
+                        <button>200ml</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_522f20b7e601438aac01a8676122982f~mv2.png/v1/fill/w_1024,h_1024,al_c,q_90,enc_avif,quality_auto/c837a6_522f20b7e601438aac01a8676122982f~mv2.png" alt="Coastal Mist Toner">
+                        </a>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Coastal Mist Toner</a></p>
+                    <p class="product-price"><s>$40.00</s> <span class="sale-price">$30.00</span></p>
+                    <div class="variant-btns">
+                        <button>Unscented</button>
+                        <button>Rose Water</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_44b8b50e2cfd48fa896e22b8ab332723~mv2.png/v1/fill/w_1024,h_1024,al_c,q_90,enc_avif,quality_auto/c837a6_44b8b50e2cfd48fa896e22b8ab332723~mv2.png" alt="Dew Drop Serum">
+                        </a>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Dew Drop Serum</a></p>
+                    <p class="product-price">$55.00</p>
+                    <div class="variant-btns">
+                        <button>Sensitive</button>
+                        <button>Normal</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_7e20741e12c6461ebdd4e8075c99d454~mv2.png/v1/fill/w_1552,h_1552,al_c,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_7e20741e12c6461ebdd4e8075c99d454~mv2.png" alt="Deep Dive Gel Cream">
+                        </a>
+                        <span class="badge new">New</span>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Deep Dive Gel Cream</a></p>
+                    <p class="product-price">$45.00</p>
+                    <div class="variant-btns">
+                        <button>50ml</button>
+                        <button>100ml</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_64c528ce9c4e4d979b4ad79985181daf~mv2.png/v1/fill/w_1552,h_1552,al_c,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_64c528ce9c4e4d979b4ad79985181daf~mv2.png" alt="Cloud Cream Wash">
+                        </a>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Cloud Cream Wash</a></p>
+                    <p class="product-price"><s>$26.00</s> <span class="sale-price">$22.00</span></p>
+                    <div class="variant-btns">
+                        <button>Dry</button>
+                        <button>Oily</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_a10441961a414a268040491ff76cfde5~mv2.png/v1/fill/w_1552,h_1552,al_c,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_a10441961a414a268040491ff76cfde5~mv2.png" alt="Silk Oil Cleanser">
+                        </a>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Silk Oil Cleanser</a></p>
+                    <p class="product-price">$35.00</p>
+                    <div class="variant-btns">
+                        <button>100ml</button>
+                        <button>200ml</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_1554e12fe3b9482ba58bc78488b5a456~mv2.png/v1/fill/w_1552,h_1552,al_c,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_1554e12fe3b9482ba58bc78488b5a456~mv2.png" alt="Enzyme Powder Polish">
+                        </a>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Enzyme Powder Polish</a></p>
+                    <p class="product-price"><s>$35.00</s> <span class="sale-price">$28.00</span></p>
+                    <div class="variant-btns">
+                        <button>Gentle</button>
+                        <button>Deep</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_978671a7e8834d268cefa6202c88d49d~mv2.png/v1/fill/w_1024,h_1024,al_c,q_90,enc_avif,quality_auto/c837a6_978671a7e8834d268cefa6202c88d49d~mv2.png" alt="Pure Micellar Water">
+                        </a>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Pure Micellar Water</a></p>
+                    <p class="product-price">$20.00</p>
+                    <div class="variant-btns">
+                        <button>200ml</button>
+                        <button>400ml</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_af582b0947a6492981f3d2fdd4a4b213~mv2.png/v1/fill/w_1536,h_1536,al_c,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_af582b0947a6492981f3d2fdd4a4b213~mv2.png" alt="Melt Away Cleansing Balm">
+                        </a>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Melt Away Cleansing Balm</a></p>
+                    <p class="product-price"><s>$35.00</s> <span class="sale-price">$30.00</span></p>
+                    <div class="variant-btns">
+                        <button>50ml</button>
+                        <button>100ml</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_ab2b692ac7bb478fa7e13441a4fe4a3a~mv2.png/v1/fill/w_1552,h_1552,al_c,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_ab2b692ac7bb478fa7e13441a4fe4a3a~mv2.png" alt="Jelly Splash Face Wash">
+                        </a>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Jelly Splash Face Wash</a></p>
+                    <p class="product-price">$25.00</p>
+                    <div class="variant-btns">
+                        <button>150ml</button>
+                        <button>300ml</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_8ddec06506aa4c9cb41837c3a0fe331c~mv2.png/v1/fill/w_1024,h_1024,al_c,q_90,enc_avif,quality_auto/c837a6_8ddec06506aa4c9cb41837c3a0fe331c~mv2.png" alt="Hydrating Solar Mist">
+                        </a>
+                        <span class="badge new">New</span>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Hydrating Solar Mist</a></p>
+                    <p class="product-price">$22.00</p>
+                    <div class="variant-btns">
+                        <button>Coconut</button>
+                        <button>Unscented</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_efc62af6c986433ab05723d4f3b4aa0f~mv2.png/v1/fill/w_1024,h_1024,al_c,q_90,enc_avif,quality_auto/c837a6_efc62af6c986433ab05723d4f3b4aa0f~mv2.png" alt="Cooling After Sun Gel">
+                        </a>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Cooling After Sun Gel</a></p>
+                    <p class="product-price">$24.00</p>
+                    <div class="variant-btns">
+                        <button>50ml</button>
+                        <button>100ml</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_c0f23847be544637af2f6c2796a302c5~mv2.png/v1/fill/w_1024,h_1024,al_c,q_90,enc_avif,quality_auto/c837a6_c0f23847be544637af2f6c2796a302c5~mv2.png" alt="Solar Lip Shield">
+                        </a>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Solar Lip Shield</a></p>
+                    <p class="product-price"><s>$20.00</s> <span class="sale-price">$15.00</span></p>
+                    <div class="variant-btns">
+                        <button>Coconut</button>
+                        <button>Watermelon</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_e18b9b72e7ac412e924407bf453266dd~mv2.png/v1/fill/w_1536,h_1536,al_c,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_e18b9b72e7ac412e924407bf453266dd~mv2.png" alt="Radiant Body Oil">
+                        </a>
+                        <span class="badge bestseller">Bestseller</span>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Radiant Body Oil</a></p>
+                    <p class="product-price">$35.00</p>
+                    <div class="variant-btns">
+                        <button>30</button>
+                        <button>50</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_50a7c666ad5b46178d4fa97341bcbaa2~mv2.png/v1/fill/w_1024,h_1024,al_c,q_90,enc_avif,quality_auto/c837a6_50a7c666ad5b46178d4fa97341bcbaa2~mv2.png" alt="Sheer Body Sunscreen">
+                        </a>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Sheer Body Sunscreen</a></p>
+                    <p class="product-price">$35.00</p>
+                    <div class="variant-btns">
+                        <button>150ml</button>
+                        <button>250ml</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <a href="productdetailpage.html">
+                            <img src="https://static.wixstatic.com/media/c837a6_7006bb47b5074a3daf799c9881318097~mv2.png/v1/fill/w_1008,h_1008,al_c,q_90,enc_avif,quality_auto/c837a6_7006bb47b5074a3daf799c9881318097~mv2.png" alt="Glow Daily Sun Serum">
+                        </a>
+                        <span class="badge new">New</span>
+                    </div>
+                    <p class="product-name"><a href="productdetailpage.html">Glow Daily Sun Serum</a></p>
+                    <p class="product-price">$32.00</p>
+                    <div class="variant-btns">
+                        <button>30ml</button>
+                        <button>50ml</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-nav">
+                <a href="all products.html">Shop All</a>
+                <a href="all products.html">Cleanse</a>
+                <a href="all products.html">Hydrate</a>
+                <a href="all products.html">Protect</a>
+                <a href="all products.html">New Arrivals</a>
+                <a href="Our story.html">Our Story</a>
+                <div class="footer-social">
+                    <a href="#"><img src="./Assets/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="./Assets/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="./Assets/tiktok.svg" alt="TikTok"></a>
+                </div>
+            </div>
+            <div class="footer-policy">
+                <a href="#">Refund Policy</a>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Accessibility Statement</a>
+            </div>
+        </div>
+        <div class="footer-logo">
+            <img src="https://static.wixstatic.com/media/c837a6_779a4fe798cb45b2a131576156bd0118~mv2.png" alt="dreama">
+        </div>
+        <div class="footer-copy">
+            <p>© 2035 by dreama. Powered and secured by <a href="#">Wix</a></p>
+        </div>
+    </footer>
+
 </body>
 </html>

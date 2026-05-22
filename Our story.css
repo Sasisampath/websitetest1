@@ -1,0 +1,363 @@
+/* ── Global Header System Reset ── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'MADE Canvas', sans-serif;
+    color: #1a0a0a;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Fixed Announcement Bar ── */
+.announcement-bar {
+    background-color: #311D1F;
+    color: #fff;
+    text-align: center;
+    padding: 11px 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/* ── Exact Clone Header Container ── */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 50px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    width: 100%;
+}
+
+.header-logo a {
+    display: inline-block;
+}
+
+.header-logo img {
+    display: block;
+    width: 112px; 
+    height: auto;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px; 
+}
+
+.header-menu a {
+    color: #6a0610;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-transform: none; 
+    transition: color 0.2s ease;
+}
+
+.header-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Underline active page tracking marker */
+.header-menu a.active {
+    text-decoration: underline !important;
+    text-underline-offset: 4px;
+}
+
+/* Right-Hand Utilities Alignment Framework */
+.header-utilities {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.account-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #6a0610;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.account-link:hover {
+    opacity: 0.8;
+}
+
+.profile-icon {
+    display: block;
+}
+
+.cart-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cart-icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+.cart-count-badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: #6a0610;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Rebel DNA Column Configurations ── */
+.rebel-dna {
+    display: flex;                    
+    align-items: center;
+    gap: 60px;
+    padding: 80px 80px;
+    background-color: #fdf8f0;
+}
+
+.rebel-dna-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rebel-dna-text h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #6a0610;
+    margin-bottom: 8px;
+}
+
+.rebel-dna-text p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.7;
+}
+
+.signature {
+    width: 240px;
+    margin-top: 10px;
+}
+
+.rebel-dna-image {
+    flex: 1;
+}
+
+.rebel-dna-image img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Values Blocks ── */
+.values {
+    padding: 80px 40px;
+    background-color: #fff;
+}
+
+.values h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a0a0a;
+    margin-bottom: 40px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   
+    gap: 24px;
+}
+
+.values-card {
+    background-color: #fce8ea;               
+    border-radius: 16px;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.values-card svg {
+    margin-bottom: 8px;
+}
+
+.values-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #6a0610;
+}
+
+.values-desc {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* ── Science Block layouts ── */
+.science-section {
+    display: flex;               
+    align-items: stretch;
+    background-color: #fdf8f0;
+}
+
+.science-image {
+    flex: 1;
+}
+
+.science-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.science-text {
+    flex: 1;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.science-text h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #6a0610;
+    margin-bottom: 8px;
+}
+
+.science-text p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* ── Mid Campaign Blocks ── */
+.next-chapter {
+    display: flex;                        
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 60px;
+    background-color: #fff8d6;            
+}
+
+.next-chapter-text h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #6a0610;
+    margin-bottom: 8px;
+}
+
+.next-chapter-text p {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.shop-arrivals-btn {
+    background-color: #6a0610;           
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.shop-arrivals-btn:hover {
+    background-color: #8b0a1a;
+}
+
+/* ── Footer Layout ── */
+.footer {
+    background-color: #311D1F;
+    color: #fff;
+    padding: 60px 40px 0;
+}
+
+.footer-top {
+    display: flex;
+    gap: 120px;
+    margin-bottom: 80px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.footer-social img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-policy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-policy a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+.footer-logo img {
+    width: 100%;
+    display: block;
+}
+
+.footer-copy {
+    text-align: right;
+    padding: 16px 0 24px;
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.footer-copy a {
+    color: #ccc;
+}
